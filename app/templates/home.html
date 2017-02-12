@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 class="page-header">Flask Starter Code</h1>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert alert-success">
+      <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+{% endwith %}
+<p class="lead">Use this starter template for your Flask apps as a way to quickly start any new project.<br>
+All you get are these files and mostly barebones HTML/CSS files.</p>
+{% endblock %}
